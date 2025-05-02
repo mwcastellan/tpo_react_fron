@@ -40,7 +40,7 @@ const Main = () => {
           </aside>
         </div>
 
-        <div class="ubicacion">
+        <div class="ubicacion" id="ubicacion">
           <div class="parrafo">
             <h3>Ubicación</h3>
             <p>Nos encontramos en el hermoso barrio de Almagro</p>

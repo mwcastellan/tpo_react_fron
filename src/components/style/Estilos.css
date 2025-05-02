@@ -83,17 +83,16 @@
 .ubicacion {
   width: 100%;
   margin: auto;
-  border: 1px solid beige;
 }
 .parrafo {
-  margin: 0.0rem;
-  padding: 0.0rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid beige;
 }
 
 .mapa {
-  margin: 0.0rem;
-  padding: 0.0rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid beige;
 }
 
@@ -108,7 +107,6 @@
   .contenido-principal {
     flex-basis: calc(50% - 1rem);
   }
-
   .ubicacion {
     display: flex;
     justify-content: space-between;
