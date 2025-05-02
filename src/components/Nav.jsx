@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "../assets/img/icon/favicon.ico";
+import Carrusel from "../assets/img/carrusel1.png";
 
 const Nav = () => {
   return (
     <>
       <nav class="nav">
         <ul>
-          <img src={Logo} width="70" height="70" />
+          <img src={Carrusel} width="90" height="70" />
           <li>
             <a href="index.html">Inicio</a>
           </li>
