@@ -1,0 +1,39 @@
+/* Estilos de la Aplicacion */
+.header {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(200, 240, 240);
+  padding: 1px;
+}
+.header h2 {
+  text-align: center;
+}
+.nav {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(200, 240, 240);
+  padding: 1px;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  align-items: center;
+}
+.nav li {
+  display: inline-block;
+}
+
+.nav li:hover:not(.active) {
+  background-color: rgb(230, 215, 215);
+}
+
+.footer {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color:cadetblue;
+  
+  padding: 5px;  
+    text-align: center;
+}
