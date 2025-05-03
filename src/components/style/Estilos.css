@@ -1,120 +1,12 @@
-/* Estilos de la Aplicacion */
-/* HEADER */
-.header {
-  font-family: "Poppins", Courier, monospace;
-  color: black;
-  background-color: rgb(200, 240, 240);
-  padding: 1px;
-}
-.header h3 {
-  text-align: center;
+a{
+    color: white;
+    text-decoration: none;
 }
 
-/* NAV */
-.nav li:hover:not(.active) {
-  background-color: rgb(230, 215, 215);
-}
-.menu {
-  font-family: "Poppins", Courier, monospace;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: rgb(200, 240, 240);
-  color: black;
-  justify-content: space-around;
-  align-items: center;
-}
-.menu li {
-  padding: 10px;
-}
-.menu a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  display: block;
-}
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
+footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
-/* FOOTER */
-.footer {
-  font-family: "Poppins", Courier, monospace;
-  color: white;
-  background-color: cadetblue;
-  padding: 5px;
-  text-align: center;
-}
-
-/* MAIN */
-.main {
-  font-family: "Poppins", Courier, monospace;
-}
-.main-principal {
-  width: 100%;
-  margin: auto;
-}
-
-.main-principal p:hover {
-  font-style: italic;
-}
-
-.contenido-principal {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid beige;
-}
-
-.img-carrusel1 {
-  width: 100%; /* Original 768 x 512 */
-  height: 100%;
-}
-
-.contenido-aside {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid beige;
-}
-
-.ubicacion {
-  width: 100%;
-  margin: auto;
-}
-.parrafo {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid beige;
-}
-
-.mapa {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid beige;
-}
-
-@media (min-width: 768px) {
-  .main-principal {
-    display: flex;
-    justify-content: space-between;
-  }
-  .contenido-aside {
-    flex-basis: calc(50% - 1rem);
-  }
-  .contenido-principal {
-    flex-basis: calc(50% - 1rem);
-  }
-  .ubicacion {
-    display: flex;
-    justify-content: space-between;
-  }
-  .mapa {
-    flex-basis: calc(50% - 1rem);
-  }
-  .parrafo {
-    flex-basis: calc(50% - 1rem);
-  }
-}

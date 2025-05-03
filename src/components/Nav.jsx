@@ -1,34 +1,26 @@
-import React from "react";
-import Carrusel from "../assets/img/carrusel1.png";
-import Carrito from "../assets/img/cart-shopping-solid.svg";
+import React from 'react'
+import './style/Estilos.css'
+import logo from '../assets/react.svg'
+import Cart from './Cart'
 
-const Nav = () => {
+const Nav = ({vaciarCarrito, cartCount,cartItems, isCartOpen, setCartOpen,borrarProducto }) => {
+
   return (
-    <nav class="nav">
-      <ul class="menu">
-        <img src={Carrusel} width="90" height="70" />
-        <li>
-          <a href="index.html">Inicio</a>
-        </li>
-        <li>
-          <a href="productos.html">Productos</a>
-        </li>
-        <li>
-          <a href="adoptame.html">Adoptame</a>
-        </li>
-
-        <li>
-          <a href="#Ubicacion">Ubicación</a>
-        </li>
-        <li>
-          <a href="formulario.html">Contacto</a>
-        </li>
-        <li>
-          <img src={Carrito} width="30" height="30" />
+    <nav style={{ backgroundColor: "rgb(96, 177, 177)", color: "white", padding: "10px" }}>
+      <ul>
+        <img src={logo} />
+        <li><a href='#'>Inicio</a></li>
+        <li>Acerca de</li>
+        <li>Contacto</li>
+        <li>Carrito: {cartCount}</li>
+        <li className='cartNav'>
+          <button className='btnCart' onClick={() => setCartOpen(true)}><i className="fa-solid fa-cart-shopping"></i></button>
+          <Cart vaciarCarrito={vaciarCarrito} cartItems={cartItems} isOpen={isCartOpen} onClose={() => setCartOpen(false)} borrarProducto={borrarProducto} />
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+
+export default Nav

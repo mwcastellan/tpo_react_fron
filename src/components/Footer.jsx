@@ -1,11 +1,19 @@
 import React from "react";
-import Facebook from "../assets/img/facebook-brands.svg";
-import Instagram from "../assets/img/instagram-brands.svg";
-import Whatapps from "../assets/img/whatsapp-brands.svg";
-import Github from "../assets/img/github-brands.svg";
+import Facebook from "../assets/facebook-brands.svg";
+import Instagram from "../assets/instagram-brands.svg";
+import Whatapps from "../assets/whatsapp-brands.svg";
+import Github from "../assets/github-brands.svg";
+
+let estilos = {
+  backgroundColor: "rgb(65, 164, 164)",
+  padding: "1px",
+  textAlign: "center",
+  color: "black",
+};
+
 const Footer = () => {
   return (
-    <footer class="footer">
+    <footer style={estilos}>
       <a
         href="https://facebook.com"
         title="Seguinos en Facebook"
@@ -37,7 +45,7 @@ const Footer = () => {
         <img src={Github} width="50" height="50" />
       </a>
 
-      <p>&copy; 2024 derechos reservados</p>
+      <p>&copy; 2025 derechos reservados</p>
     </footer>
   );
 };
