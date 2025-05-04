@@ -26,7 +26,7 @@ const Product = ({ product, addToCart }) => {
         <button
           onClick={decrease}
           style={{
-            backgroundColor: "#e0e0e0",
+            backgroundColor: "green",
             border: "none",
             padding: "4px 8px",
             borderRadius: "4px",
@@ -39,7 +39,7 @@ const Product = ({ product, addToCart }) => {
         <button
           onClick={increase}
           style={{
-            backgroundColor: "#e0e0e0",
+            backgroundColor: "green",
             border: "none",
             padding: "4px 8px",
             borderRadius: "4px",
