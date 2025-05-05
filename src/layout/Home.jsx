@@ -18,7 +18,7 @@ const Home = ({cart,handleAddToCart, isCartOpen,setCartOpen,borrarProducto, vaci
 
     useEffect(()=>{
 
-      fetch('https://6812b137129f6313e20f46e7.mockapi.io/productos-ecommerce/productos')
+      fetch('https://681823705a4b07b9d1ce05b2.mockapi.io/tpo-react-fron/productos')
       .then((respuesta) => respuesta.json())
       .then((datos) => {
         setProductos(datos)

@@ -8,25 +8,25 @@ const Product = ({ product, addToCart }) => {
     setCantidad((prev) => (prev != product.stock ? prev + 1 : prev));
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
-  return (
-    <section className="product">
+  return (  <section className="product">
       <div className="fondoProducto"></div>
       <img src={product.imagen} alt={product.name} className="imagenTrago" />
       <h3 className="product-name">{product.nombre}</h3>
       <p className="product-price">${product.precio}</p>
       <p>Stock: {product.stock}</p>
       <div
+  
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "8px",
-          marginBottom: "12px",
+          gap: "2px",
+          marginBottom: "2px",
         }}
       >
         <button
           onClick={decrease}
           style={{
-            backgroundColor: "green",
+            backgroundColor: "rgb(65, 164, 164)",
             border: "none",
             padding: "4px 8px",
             borderRadius: "4px",
@@ -39,7 +39,7 @@ const Product = ({ product, addToCart }) => {
         <button
           onClick={increase}
           style={{
-            backgroundColor: "green",
+            backgroundColor: "rgb(65, 164, 164)",
             border: "none",
             padding: "4px 8px",
             borderRadius: "4px",
@@ -51,7 +51,7 @@ const Product = ({ product, addToCart }) => {
       </div>
 
       <button
-        className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700"
+        className="px-2 py-0 rounded"
         onClick={() => addToCart({ ...product, cantidad: cantidad })}
       >
         Agregar

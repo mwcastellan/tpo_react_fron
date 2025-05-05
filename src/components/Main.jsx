@@ -7,7 +7,7 @@ const Main = ({ data }) => {
     <main className="main">
       <img style={{ width: "25%" }} src={carrusel1} />
       <p>
-        Más que una clínica veterinaria, Veterinaria Grupo 9 es una familia
+        Más que una clínica veterinaria, Veterinaria Clase 25022 es una familia
         dedicada a brindar atención integral a sus mascotas. Con años de
         experiencia y un profundo amor por los animales, nuestro equipo se
         compromete a ofrecer servicios veterinarios de vanguardia en un ambiente

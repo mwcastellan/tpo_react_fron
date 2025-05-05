@@ -16,27 +16,27 @@ const ProductList = ({ products, addToCart }) => {
         ))}
       </div>
 
-      <section class="Productos_Notas_containerGrid">
-        <article class="Productos_Nota_containerGridItem">
-          <i class="fa-solid fa-truck fa-2x"></i>
+      <section className="Productos_Notas_containerGrid">
+        <article className="Productos_Nota_containerGridItem">
+          <i className="fa-solid fa-truck fa-2x"></i>
           <h4>Envío gratis</h4>
           <p>En compras mayores a $22000</p>
         </article>
 
-        <article class="Productos_Nota_containerGridItem">
-          <i class="fa-solid fa-cart-shopping fa-2x"></i>
+        <article className="Productos_Nota_containerGridItem">
+          <i className="fa-solid fa-cart-shopping fa-2x"></i>
           <h4>Beneficios</h4>
           <p>En todas tus compras</p>
         </article>
 
-        <article class="Productos_Nota_containerGridItem">
-          <i class="fa-regular fa-credit-card fa-2x"></i>
+        <article className="Productos_Nota_containerGridItem">
+          <i className="fa-regular fa-credit-card fa-2x"></i>
           <h4>Todos los medios de pago</h4>
           <p>Tarjetas de crédito, débito o efectivo</p>
         </article>
 
-        <article class="Productos_Nota_containerGridItem">
-          <i class="fa-solid fa-location-dot fa-2x"></i>
+        <article className="Productos_Nota_containerGridItem">
+          <i className="fa-solid fa-location-dot fa-2x"></i>
           <h4>Retiro en tienda</h4>
           <p>Beneficios y regalos exclusivos</p>
         </article>
