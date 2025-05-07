@@ -10,11 +10,11 @@ let estilosnotaspie = {
 const ProductList = ({ products, addToCart }) => {
   return (
     <>
-      <div className="galeria">
+      <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
         {products.map((product) => (
           <Product key={product.id} product={product} addToCart={addToCart} />
         ))}
-      </div>
+      </section>
 
       <section className="Productos_Notas_containerGrid">
         <article className="Productos_Nota_containerGridItem">

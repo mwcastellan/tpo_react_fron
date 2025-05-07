@@ -9,31 +9,40 @@ const Cart = ({
 }) => {
   return (
     <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
-      <div className="cart-header">
+      <div className="cart cart-header bg-primary">
         <h2>Carrito de Compras</h2>
         <button onClick={onClose}>
-          <i className="fas fa-window-close"></i>
+          <i className="fa-solid fa-window-close"></i>
         </button>
       </div>
       <div className="cart-content">
         {cartItems.length === 0 ? (
           <p>El carrito está vacío.</p>
         ) : (
-          <>
-            <ul className="cart-item" >
+          <section>
+            <ul className="cart-item">
               {cartItems.map((item, index) => (
-                <>
-                  <li key={index} style={{ fontSize: "85%", color: "black"}}>
-                    {item.nombre} - ${item.precio} - cant:{item.cantidad}
+                <li
+                  className="card-body"
+                  key={index}
+                  style={{ fontSize: "85%" }}
+                >
+                  <article>
+                    {item.nombre} - ${item.precio} - cant:{item.cantidad} -
                     <button onClick={() => borrarProducto(item)}>
                       <i className="fa-solid fa-trash"></i>
                     </button>
-                  </li>
-                </>
+                  </article>
+                </li>
               ))}
             </ul>
-            <button onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
-          </>
+            <button
+              className="btn btn-secondary"
+              onClick={() => vaciarCarrito()}
+            >
+              Vaciar Carrito
+            </button>
+          </section>
         )}
       </div>
     </div>
