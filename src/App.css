@@ -12869,7 +12869,7 @@ legend {
   /* grid-item */
   /* Cada producto es un Flex */
   margin: 0.5rem;
-  padding: 0.5rem;
+  padding:0.5rem;
   border: 1px solid rgb(200, 240, 240);
   /* Flex */
   display: flex;
@@ -12927,7 +12927,6 @@ legend {
 }
 
 .Productos_Nota_containerGridItem {
-  color: green;
   margin: 0.2rem;
 }
 

@@ -15,15 +15,15 @@ const Nav = ({
     <nav className="Nav navbar-expand-lg bg-primary">
       <img src={logo} />
       <ul className="navbar-nav me-auto Nav-Ul">
-        <li className="nav-item">Inicio
-        </li>
-        <li className="nav-item">Acerca de</li>
-        <li className="nav-item">Contacto</li>
-        <li className="nav-item">Carrito: {cartCount}</li>
+        <li className="nav-item h5">Inicio</li>
+        <li className="nav-item h5">Acerca de</li>
+        <li className="nav-item h5">Contacto</li>
+        <li className="nav-item h5">Carrito: {cartCount}</li>
         <li className="nav-item">
-          <button className="btnCart" onClick={() => setCartOpen(true)}>
-            <i className="fa-solid fa-cart-shopping"></i>
-          </button>
+          <button
+            className="btnCart fa-solid fa-cart-shopping fa-2x"
+            onClick={() => setCartOpen(true)}
+          ></button>
           <Cart
             vaciarCarrito={vaciarCarrito}
             cartItems={cartItems}
