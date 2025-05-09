@@ -33,19 +33,19 @@ const Cart = ({
                   key={index}
                   style={{ fontSize: "85%" }}
                 >
-                  <article className="Product">
-                    <ul class="list-group">
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <article className="card">
+                    <ul>
+                      <li class="card-header d-flex justify-content-between align-items-center">
                         <img src={item.imagen} width="15%" height="15%" />
                         <b>{item.nombre} </b>
                       </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <li class="card-body d-flex justify-content-between align-items-center">
                         Precio ${item.precio}
                         <span class="badge bg-primary rounded-pill">
                           {item.cantidad}
                         </span>
                       </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <li class="card-body d-flex justify-content-between align-items-center">
                         <button onClick={() => borrarProducto(item)}>
                           <i class="fa-solid fa-trash"></i>
                         </button>
