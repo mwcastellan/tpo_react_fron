@@ -15,10 +15,10 @@ const Cart = ({
         <button
           onClick={onClose}
           type="button"
-          class="btn btn-secondary"
+          className="btn btn-secondary"
           data-bs-dismiss="modal"
         >
-          Cerrar
+          <i className="far fa-window-close"></i>
         </button>
       </div>
       <div className="cart-content">
@@ -26,28 +26,27 @@ const Cart = ({
           <p>El carrito está vacío.</p>
         ) : (
           <section>
-            <ul className="cart-item">
+            <ul className="card-header">
               {cartItems.map((item, index) => (
                 <li
-                  className="card-body"
+                  className="card-body d-flex justify-content-between align-items-center"
                   key={index}
                   style={{ fontSize: "85%" }}
                 >
                   <article className="card">
                     <ul>
-                      <li class="card-header d-flex justify-content-between align-items-center">
+                      <li className="card-header d-flex justify-content-between align-items-center">
                         <img src={item.imagen} width="15%" height="15%" />
                         <b>{item.nombre} </b>
                       </li>
-                      <li class="card-body d-flex justify-content-between align-items-center">
-                        Precio ${item.precio}
-                        <span class="badge bg-primary rounded-pill">
-                          {item.cantidad}
+                      <li className="card-body d-flex justify-content-between align-items-center">
+                        <span>Precio ${item.precio}</span>
+                        <span>Disponible {item.disponible}</span>
+                        <span className="badge bg-primary rounded-pill">
+                         Cantidad {item.cantidad}
                         </span>
-                      </li>
-                      <li class="card-body d-flex justify-content-between align-items-center">
                         <button onClick={() => borrarProducto(item)}>
-                          <i class="fa-solid fa-trash"></i>
+                          <i className="fa-solid fa-trash"></i>
                         </button>
                       </li>
                     </ul>

@@ -2,10 +2,9 @@ import React, { useState } from "react";
 
 const Product = ({ product, addToCart }) => {
   const [cantidad, setCantidad] = useState(1);
-  // const [stock, setStock] = useState(5)
 
   const increase = () =>
-    setCantidad((prev) => (prev != product.stock ? prev + 1 : prev));
+    setCantidad((prev) => (prev < product.disponible ? prev + 1 : prev));
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
@@ -13,12 +12,8 @@ const Product = ({ product, addToCart }) => {
       <h5 className="card-header">{product.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Precio: ${product.precio}</h6>
-        <h6 className="card-title">Stock: {product.stock}</h6>
-        <img
-          src={product.imagen}
-          width="50%"
-          height="50%"
-        />
+        <h6 className="card-title">Disponible: {product.disponible}</h6>
+        <img src={product.imagen} width="50%" height="50%" />
       </div>
       <div
         className="card-footer text-muted"
