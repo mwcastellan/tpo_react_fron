@@ -43,8 +43,9 @@ const Inicio = ({ cart, borrarProducto }) => {
           <div class="Inicio-parrafo">
             <h3>Ubicación</h3>
             <p>
+              <i class="fa-solid fa-location-dot"></i>
               Nos encontramos en el hermoso barrio de Almagro de la Ciudad
-              Autónoma de Buenos Aires
+              Autónoma de Buenos Aires.
             </p>
           </div>
         </div>

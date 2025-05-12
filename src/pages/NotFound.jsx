@@ -1,17 +1,20 @@
 import React from "react";
-/* import "./style/NotFound.css";*/
+import Header from "../components/estaticos/Header";
+import Footer from "../components/estaticos/Footer";
 
-const NotFound = () => {
+const NotFound = ({ cart, borrarProducto }) => {
   return (
-    <div className="notfound-container">
-      <div className="notfound-content">
-        <h1 className="notfound-title">404</h1>
-        <p className="notfound-subtitle">Ups..</p>
-        <p className="notfound-text">
-          Ups! No se encuentra la página.
-        </p>
+    <>
+      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <div className="notfound-container alert alert-dismissible alert-primary">
+        <div className="notfound-content">
+          <h1 className="notfound-title">404</h1>
+          <p className="notfound-subtitle">Caramba...</p>
+          <p className="notfound-text">No se encuentra la página.</p>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

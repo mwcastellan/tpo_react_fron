@@ -12996,6 +12996,10 @@ legend {
   padding: 15px;
 }
 
+.img-carrusel1 {
+  width: 100%; 
+  height: 100%;}
+
 @media screen and (max-width: 1150px) {
   .Inicio-main,
   .Inicio-aside,
@@ -13005,4 +13009,37 @@ legend {
   }
 }
 
-/* ------ */
+/* NotFound */
+.notfound-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    
+  }
+  
+  .notfound-content {
+    text-align: center;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .notfound-title {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .notfound-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .notfound-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+/*          */

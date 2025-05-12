@@ -105,7 +105,7 @@ function App() {
             <Contacto borrarProducto={handleDeleteFromCart} cart={cart} />
           }
         />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound borrarProducto={handleDeleteFromCart} cart={cart}/>} />
       </Routes>
     </Router>
   );
