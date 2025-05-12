@@ -7,12 +7,12 @@ let estilosnotaspie = {
   textAlign: "center",
   color: "black",
 };
-const ProductList = ({ products, addToCart }) => {
+const ProductList = ({ productos, agregarCarrito }) => {
   return (
     <>
       <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
-        {products.map((product) => (
-          <Product key={product.id} product={product} addToCart={addToCart} />
+        {productos.map((product) => (
+          <Product key={product.id} product={product} addToCart={agregarCarrito} />
         ))}
       </section>
 

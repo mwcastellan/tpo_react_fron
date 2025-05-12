@@ -9,7 +9,5 @@ npm create vite@latest (Si crea Proyecto). Selecciona React como framework y con
 npm install
 npm install react-router-dom
 
-
-
 4. Inicia el servidor local para ver tu aplicación:
 npm run dev

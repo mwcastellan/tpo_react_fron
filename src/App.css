@@ -12793,13 +12793,13 @@ legend {
 /* ----------------------------------------------------------------------------------------------- */
 /* ADICIONALES */
 .Header {
- padding: 2px;
+  padding: 2px;
   text-align: center;
 }
 
 .Nav {
-  text-align:left;
-  color:var(--bs-black);
+  text-align: left;
+  color: var(--bs-black);
 }
 
 .Nav-Ul {
@@ -12869,7 +12869,7 @@ legend {
   /* grid-item */
   /* Cada producto es un Flex */
   margin: 0.5rem;
-  padding:0.5rem;
+  padding: 0.5rem;
   border: 1px solid rgb(200, 240, 240);
   /* Flex */
   display: flex;
@@ -12916,7 +12916,6 @@ legend {
   }
 }
 
-
 /*-> Notas Pie de Productos */
 .Productos_Notas_containerGrid {
   display: grid;
@@ -12950,5 +12949,60 @@ legend {
 .Footer {
   padding: 10px;
   text-align: center;
-  
 }
+
+/* Inicio */
+.Inicio-container-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, auto);
+}
+
+.Inicio-container-grid > * {
+  border: 1px solid beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Inicio-main {
+  grid-column: 1/5;
+}
+
+.Inicio-aside {
+  grid-column: 5/7;
+  padding: 30px;
+}
+
+.Inicio-ubicacion {
+  grid-column: 1 / 5;
+  padding-inline-start: 10px;
+  padding: 15px;
+}
+
+.Inicio-parrafo {
+  grid-column: 1 / 5;
+  padding-inline-start: 10px;
+  padding: 15px;
+}
+
+.Inicio-mapa {
+  grid-column: 5 / 7;
+}
+
+.Inicio-mapa iframe {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1150px) {
+  .Inicio-main,
+  .Inicio-aside,
+  .Inicio-bicacion,
+  .Inicio-mapa {
+    grid-column: 1 / 7;
+  }
+}
+
+/* ------ */

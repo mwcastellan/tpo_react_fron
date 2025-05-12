@@ -1,12 +1,6 @@
 import React from "react";
 
-const Cart = ({
-  vaciarCarrito,
-  cartItems,
-  isOpen,
-  onClose,
-  borrarProducto,
-}) => {
+const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
   return (
     <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
       <div className="cart cart-header bg-primary">
@@ -43,7 +37,7 @@ const Cart = ({
                         <span>Precio ${item.precio}</span>
                         <span>Disponible {item.disponible}</span>
                         <span className="badge bg-primary rounded-pill">
-                         Cantidad {item.cantidad}
+                          Cantidad {item.cantidad}
                         </span>
                         <button onClick={() => borrarProducto(item)}>
                           <i className="fa-solid fa-trash"></i>
@@ -54,12 +48,6 @@ const Cart = ({
                 </li>
               ))}
             </ul>
-            <button
-              className="btn btn-secondary"
-              onClick={() => vaciarCarrito()}
-            >
-              Vaciar Carrito
-            </button>
           </section>
         )}
       </div>
