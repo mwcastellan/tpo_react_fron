@@ -1,18 +1,32 @@
 import React from "react";
 import Product from "./Product";
+import { useState } from "react";
 
-let estilosnotaspie = {
-  backgroundColor: "rgb(65, 164, 164)",
-  padding: "1px",
-  textAlign: "center",
-  color: "black",
-};
 const ProductList = ({ productos, agregarCarrito }) => {
+  const [filtro, setFiltro] = useState("");
+  const productosFiltrados = productos.filter((product) =>
+    product.nombre.toLowerCase().includes(filtro.toLowerCase())
+  );
   return (
     <>
+      <div className="ProductList_Filtro">
+        <label className="form-label mt-4">Filtrar por nombre</label>
+        <input
+          type="text"
+          className="form-control"
+          value={filtro}
+          onChange={(e) => setFiltro(e.target.value)}
+        />
+        <br />
+      </div>
+
       <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
-        {productos.map((product) => (
-          <Product key={product.id} product={product} addToCart={agregarCarrito} />
+        {productosFiltrados.map((product) => (
+          <Product
+            key={product.id}
+            product={product}
+            addToCart={agregarCarrito}
+          />
         ))}
       </section>
 

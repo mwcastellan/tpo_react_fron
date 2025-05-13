@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../Cart";
-import Logo from "./img/react.svg";
+import Logo from "../../assets/react.svg";
 
 const Header = ({ cartItems, borrarProducto }) => {
   const [isCartOpen, setCartOpen] = useState(false);
@@ -20,7 +20,7 @@ const Header = ({ cartItems, borrarProducto }) => {
           </li>
           <li>
             <Link to="/productos" className="link nav-item h5">
-              Productos
+              Galeria de Productos
             </Link>
           </li>
           <li>

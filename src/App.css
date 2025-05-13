@@ -12858,6 +12858,12 @@ legend {
   text-align: left;
 }
 
+.ProductList_Filtro {
+  border:transparent;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
 .Productos {
   /* grid-container */
   display: grid;
@@ -13041,5 +13047,11 @@ legend {
     font-size: 1rem;
     margin-bottom: 2rem;
   }
-  
+/* Contacto */
+.ContactoFieldset {
+  border: 1px solid ;
+  margin: 5rem;
+  padding: 1rem;
+}
+
 /*          */

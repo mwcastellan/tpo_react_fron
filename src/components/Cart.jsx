@@ -32,12 +32,15 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
                       <li className="card-header d-flex justify-content-between align-items-center">
                         <img src={item.imagen} width="15%" height="15%" />
                         <b>{item.nombre} </b>
-                      </li>
-                      <li className="card-body d-flex justify-content-between align-items-center">
                         <span>Precio ${item.precio}</span>
                         <span>Disponible {item.disponible}</span>
+                      </li>
+                      <li className="card-body d-flex justify-content-between align-items-center">
                         <span className="badge bg-primary rounded-pill">
                           Cantidad {item.cantidad}
+                        </span>
+                        <span className="badge bg-secondary rounded-pill">
+                          Total ${item.cantidad * item.precio}
                         </span>
                         <button onClick={() => borrarProducto(item)}>
                           <i className="fa-solid fa-trash"></i>

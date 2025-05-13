@@ -1,8 +1,8 @@
 import React from "react";
-import imgFacebook from "../estaticos/img/facebook-brands.svg";
-import imgInstagram from "../estaticos/img/instagram-brands.svg";
-import imgWhatapps from "../estaticos/img/whatsapp-brands.svg";
-import imgGithub from "../estaticos/img/github-brands.svg";
+import imgFacebook from "../../assets/facebook-brands.svg";
+import imgInstagram from "../../assets/instagram-brands.svg";
+import imgWhatapps from "../../assets/whatsapp-brands.svg";
+import imgGithub from "../../assets/github-brands.svg";
 
 const Footer = () => {
   return (
