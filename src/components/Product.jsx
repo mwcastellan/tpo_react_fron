@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Product = ({ product, addToCart }) => {
   const [cantidad, setCantidad] = useState(1);
-
   const increase = () =>
     setCantidad((prev) => (prev < product.disponible ? prev + 1 : prev));
   const decrease = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));

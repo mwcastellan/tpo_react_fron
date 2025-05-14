@@ -51,6 +51,8 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
                 </li>
               ))}
             </ul>
+            <br />
+            <button className="btn btn-secondary">Confirmar</button>
           </section>
         )}
       </div>

@@ -7,18 +7,27 @@ const ProductList = ({ productos, agregarCarrito }) => {
   const productosFiltrados = productos.filter((product) =>
     product.nombre.toLowerCase().includes(filtro.toLowerCase())
   );
+  const [mostrarInput, setMostrarInput] = useState(false);
   return (
     <>
-      <div className="ProductList_Filtro">
-        <label className="form-label mt-4">Filtrar por nombre</label>
-        <input
-          type="text"
-          className="form-control"
-          value={filtro}
-          onChange={(e) => setFiltro(e.target.value)}
-        />
-        <br />
-      </div>
+      <section className="ProductList_Filtro">
+        <button
+          className="accordion-button collapsed"
+          onClick={() => setMostrarInput(!mostrarInput)}
+        >
+          {mostrarInput ? "Filtrar por Nombre ▲" :  "Filtrar por Nombre ▼"}
+        </button>
+        {mostrarInput && (
+          <section>
+            <input
+              type="text"
+              className="form-control"
+              value={filtro}
+              onChange={(e) => setFiltro(e.target.value)}
+            />
+          </section>
+        )}
+      </section>
 
       <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
         {productosFiltrados.map((product) => (

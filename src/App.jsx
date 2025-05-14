@@ -37,19 +37,17 @@ function App() {
     const productExist = cart.find((item) => item.id === product.id);
 
     if (productExist) {
-      // alert('El producto ya esta en el carrito')
       setCart(
         cart.map((item) =>
           item.id === product.id
             ? {
                 ...item,
                 cantidad:
-                  item.cantidad < product.disponible
-                    ? item.cantidad + 1
-                    : item.cantidad,
+                  product.cantidad < product.disponible
+                    ? product.cantidad
+                    : product.cantidad,
               }
-            : // item.cantidad + 1 }//
-              item
+            : item
         )
       );
     } else {
@@ -105,7 +103,12 @@ function App() {
             <Contacto borrarProducto={handleDeleteFromCart} cart={cart} />
           }
         />
-        <Route path="*" element={<NotFound borrarProducto={handleDeleteFromCart} cart={cart}/>} />
+        <Route
+          path="*"
+          element={
+            <NotFound borrarProducto={handleDeleteFromCart} cart={cart} />
+          }
+        />
       </Routes>
     </Router>
   );
