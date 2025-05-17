@@ -39,7 +39,7 @@ const Header = ({ carrito, borrarProducto }) => {
               Administrar
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="link nav-item">
             <button
               className="btnCart fa-solid fa-cart-shopping fa-2x"
               onClick={() => setCartOpen(true)}

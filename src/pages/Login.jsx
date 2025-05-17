@@ -10,21 +10,26 @@ const Login = ({ isAutorizado, setIsAutorizado }) => {
   };
 
   return (
-    <article className="card mb-3 list-group-item list-group-item-action flex-column align-items-start">
-      <h5 className="card-header">Login</h5>
-      <div className="card-body">
-        <h6 className="card-title">Usuario</h6>
-        <h6 className="card-title">Contraseña</h6>
-        <br />
-        <button className="btn btn-secondary" onClick={() => ira("/")}>
-          Inicio
-        </button>
-        <br /> <br />
-        <button className="btn btn-secondary" onClick={autorizar}>
-          {isAutorizado ? "Cerrar Sesión" : "Iniciar Sesión"}
-        </button>
-      </div>
-    </article>
+    <>
+      <header className="Header bg-primary">
+        <h2>Veterinaria - Curso React Frontend - Clase 25022</h2>
+      </header>
+      <article className="card mb-3 list-group-item list-group-item-action flex-column align-items-start">
+        <h5 className="card-header">Login</h5>
+        <div className="card-body">
+          <h6 className="card-title">Usuario</h6>
+          <h6 className="card-title">Contraseña</h6>
+          <br />
+          <button className="btn btn-secondary" onClick={() => ira("/")}>
+            Inicio
+          </button>
+          <br /> <br />
+          <button className="btn btn-secondary" onClick={autorizar}>
+            {isAutorizado ? "Cerrar Sesión" : "Iniciar Sesión"}
+          </button>
+        </div>
+      </article>
+    </>
   );
 };
 export default Login;
