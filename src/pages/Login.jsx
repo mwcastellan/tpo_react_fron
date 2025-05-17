@@ -1,10 +1,13 @@
 import React from "react";
-import Administrar from "./Administrar";
 import { useNavigate } from "react-router-dom";
 
 /* Login */
 const Login = ({ isAutorizado, setIsAutorizado }) => {
-  const volver = useNavigate();
+  const ira = useNavigate();
+  const autorizar = () => {
+    setIsAutorizado(!isAutorizado);
+    ira("/administrar");
+  };
 
   return (
     <article className="card mb-3 list-group-item list-group-item-action flex-column align-items-start">
@@ -13,22 +16,13 @@ const Login = ({ isAutorizado, setIsAutorizado }) => {
         <h6 className="card-title">Usuario</h6>
         <h6 className="card-title">Contraseña</h6>
         <br />
-        <button className="btn btn-secondary" onClick={() => volver(-1)}>
-          Volver
+        <button className="btn btn-secondary" onClick={() => ira("/")}>
+          Inicio
         </button>
         <br /> <br />
-        <button
-          className="btn btn-secondary"
-          onClick={() => setIsAutorizado(!isAutorizado)}
-        >
+        <button className="btn btn-secondary" onClick={autorizar}>
           {isAutorizado ? "Cerrar Sesión" : "Iniciar Sesión"}
         </button>
-        {isAutorizado && (
-          <Administrar
-            isAutorizado={isAutorizado}
-            setIsAutorizado={setIsAutorizado}
-          />
-        )}
       </div>
     </article>
   );
