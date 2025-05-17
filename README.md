@@ -1,7 +1,8 @@
 ## Curso React Frontend - Clase 25022
 
-TRABAJO PRACTICO: tpo-react-fron - https://tpo-react-fron.vercel.app
-GITHUB: https://github.com/mwcastellan/tpo_react_fron
+- TRABAJO PRACTICO: tpo-react-fron - https://tpo-react-fron.vercel.app
+
+- GITHUB: https://github.com/mwcastellan/tpo_react_fron
 
 
 1. Descarga Node.js desde su sitio oficial e instálalo.
