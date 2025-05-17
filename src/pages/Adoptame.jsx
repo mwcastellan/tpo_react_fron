@@ -5,10 +5,11 @@ import cachorro_1 from "../assets/cachorro_1.jpg";
 import perro_adulto from "../assets/perro_adulto.jpg";
 import perro_joven from "../assets/perro_joven.jpg";
 
-const Adoptame = ({ cart, borrarProducto }) => {
+/* Adoptame */ 
+const Adoptame = ({ carrito, borrarProducto }) => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <Header borrarProducto={borrarProducto} carrito={carrito} />
       <blockquote className="blockquote">
         <h2>
           Que tener en cuenta antes de adoptar una <strong>mascota.</strong>

@@ -1,11 +1,12 @@
 import React from "react";
-import Product from "./Product";
+import Producto from "./Producto";
 import { useState } from "react";
 
-const ProductList = ({ productos, agregarCarrito }) => {
+/* Lista de Productos */
+const ProductosLista = ({ productos, agregarCarrito }) => {
   const [filtro, setFiltro] = useState("");
-  const productosFiltrados = productos.filter((product) =>
-    product.nombre.toLowerCase().includes(filtro.toLowerCase())
+  const productosFiltrados = productos.filter((producto) =>
+    producto.nombre.toLowerCase().includes(filtro.toLowerCase())
   );
   const [mostrarInput, setMostrarInput] = useState(false);
   return (
@@ -30,10 +31,10 @@ const ProductList = ({ productos, agregarCarrito }) => {
       </section>
 
       <section className="Productos list-group-item list-group-item-action flex-column align-items-start">
-        {productosFiltrados.map((product) => (
-          <Product
-            key={product.id}
-            product={product}
+        {productosFiltrados.map((producto) => (
+          <Producto
+            key={producto.id}
+            producto={producto}
             addToCart={agregarCarrito}
           />
         ))}
@@ -68,4 +69,4 @@ const ProductList = ({ productos, agregarCarrito }) => {
   );
 };
 
-export default ProductList;
+export default ProductosLista;

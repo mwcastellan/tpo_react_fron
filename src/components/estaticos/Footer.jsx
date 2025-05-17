@@ -4,6 +4,7 @@ import imgInstagram from "../../assets/instagram-brands.svg";
 import imgWhatapps from "../../assets/whatsapp-brands.svg";
 import imgGithub from "../../assets/github-brands.svg";
 
+/* Footer */
 const Footer = () => {
   return (
     <footer className="Footer bg-primary">

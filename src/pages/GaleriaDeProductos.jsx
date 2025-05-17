@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
-import ProductList from "../components/ProductList";
+import ProductosLista from "../components/ProductosLista";
 import loading from "../assets/loading.gif";
 
+/* Galeria de Productos */
 const GaleriaDeProductos = ({
-  cart,
+  carrito,
   productos,
   cargando,
   agregarCarrito,
@@ -13,11 +14,11 @@ const GaleriaDeProductos = ({
 }) => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <Header borrarProducto={borrarProducto} carrito={carrito} />
       {cargando ? (
         <img src={loading} alt="loading" />
       ) : (
-        <ProductList agregarCarrito={agregarCarrito} productos={productos} />
+        <ProductosLista agregarCarrito={agregarCarrito} productos={productos} />
       )}
 
       <Footer />

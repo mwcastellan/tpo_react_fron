@@ -3,17 +3,18 @@ import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 import carrusel1 from "../assets/carrusel1.png";
 
-const Inicio = ({ cart, borrarProducto }) => {
+/* Inicio */ 
+const Inicio = ({ carrito, borrarProducto }) => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart} />
-      <div class="Inicio-container-grid">
-        <main class="Inicio-main">
-          <div class="imagenCarrusel">
-            <img class="img-carrusel1" src={carrusel1} />
+      <Header borrarProducto={borrarProducto} carrito={carrito} />
+      <div className="Inicio-container-grid">
+        <main className="Inicio-main">
+          <div className="imagenCarrusel">
+            <img className="img-carrusel1" src={carrusel1} />
           </div>
         </main>
-        <aside class="Inicio-aside">
+        <aside className="Inicio-aside">
           <article>
             <h3>Nosotros</h3>
             <p>
@@ -39,26 +40,26 @@ const Inicio = ({ cart, borrarProducto }) => {
           </article>
         </aside>
 
-        <div class="Inicio-ubicacion">
-          <div class="Inicio-parrafo">
+        <div className="Inicio-ubicacion">
+          <div className="Inicio-parrafo">
             <h3>Ubicación</h3>
             <p>
-              <i class="fa-solid fa-location-dot"></i>
+              <i className="fa-solid fa-location-dot"></i>
               Nos encontramos en el hermoso barrio de Almagro de la Ciudad
               Autónoma de Buenos Aires.
             </p>
           </div>
         </div>
-        <div class="Inicio-mapa">
+        <div className="Inicio-mapa">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca58c45e009d%3A0x3224fded462a5d2c!2sAv.%20Hip%C3%B3lito%20Yrigoyen%203737%2C%20C1178%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1746200337183!5m2!1ses-419!2sar"
             width="70%"
             height="70%"
-            frameborder="0"
+            frameBorder="0"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
             aria-hidden="false"
-            tabindex="0"
+            tabIndex="0"
           />
         </div>
       </div>

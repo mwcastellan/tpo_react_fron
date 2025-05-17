@@ -2,10 +2,11 @@ import React from "react";
 import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 
-const Contacto = ({ cart, borrarProducto }) => {
+/* Contacto */
+const Contacto = ({ carrito, borrarProducto }) => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <Header borrarProducto={borrarProducto} carrito={carrito} />
       <form className="" action="/" method="POST">
         <fieldset className="ContactoFieldset">
           <legend>Turnos</legend>
@@ -177,7 +178,7 @@ const Contacto = ({ cart, borrarProducto }) => {
             <br />
           </div>
           <div>
-            <label htmlfor="comentario" className="form-label mt-4">
+            <label htmlFor="comentario" className="form-label mt-4">
               Consulta
             </label>
             <textarea

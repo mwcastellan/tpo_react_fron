@@ -7,59 +7,72 @@ import GaleriaDeProductos from "./pages/GaleriaDeProductos";
 import Adoptame from "./pages/Adoptame";
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
+import ProductoID from "./components/ProductoID";
+import Login from "./pages/Login";
+import Administrar from "./pages/Administrar";
+import RutaProtegida from "./auth/RutasProtegidas";
+
+/* APP */
 
 function App() {
-  const [cart, setCart] = useState([]);
+  /* Carrito de compras */
+  const [carrito, setCarrito] = useState([]);
+  /* Productos - viene de URL Json */
   const [productos, setProductos] = useState([]);
+  /* Cargando - Señal de carga de productos */
   const [cargando, setCargando] = useState(true);
+  /* Error - Errores */
   const [error, setError] = useState(false);
-  const [isCartOpen, setCartOpen] = useState(false);
+  /* isCartOpen - Señal carrito abierto */
+  /* const [isCartOpen, setIsCartOpen] = useState(false); */
+  /* Autorizado a ingresar a Administrar */
+  const [isAutorizado, setIsAutorizado] = useState(false);
 
   useEffect(() => {
     fetch(
       "https://681823705a4b07b9d1ce05b2.mockapi.io/tpo-react-fron/productos"
     )
-      .then((respuesta) => respuesta.json())
-      .then((datos) => {
+      .then((resp) => resp.json())
+      .then((data) => {
         setTimeout(() => {
-          setProductos(datos);
+          setProductos(data);
           setCargando(false);
         }, 2000);
       })
       .catch((error) => {
-        console.log("Error", error);
+        console.log("Error: ", error);
         setCargando(false);
         setError(true);
       });
   }, []);
 
-  const handleAddToCart = (product) => {
-    const productExist = cart.find((item) => item.id === product.id);
+  const handleAddToCart = (producto) => {
+    const productoExist = carrito.find((item) => item.id === producto.id);
 
-    if (productExist) {
-      setCart(
-        cart.map((item) =>
-          item.id === product.id
+    if (productoExist) {
+      setCarrito(
+        carrito.map((item) =>
+          item.id === producto.id
             ? {
                 ...item,
                 cantidad:
-                  product.cantidad < product.disponible
-                    ? product.cantidad
-                    : product.cantidad,
+                  producto.cantidad < producto.disponible
+                    ? producto.cantidad
+                    : producto.cantidad,
               }
             : item
         )
       );
     } else {
-      setCart([...cart, product]);
+      setCarrito([...carrito, producto]);
     }
   };
 
-  const handleDeleteFromCart = (product) => {
-    setCart((preVCart) => {
+  const handleDeleteFromCart = (producto) => {
+    setCarrito((preVCart) => {
       return preVCart
         .map((item) => {
-          if (item.id === product.id) {
+          if (item.id === producto.id) {
             if (item.cantidad > 1) {
               return { ...item, cantidad: item.cantidad - 1 };
             } else {
@@ -72,12 +85,15 @@ function App() {
         .filter((item) => item != null);
     });
   };
+
   return (
     <Router>
       <Routes>
         <Route
           path="/"
-          element={<Inicio borrarProducto={handleDeleteFromCart} cart={cart} />}
+          element={
+            <Inicio borrarProducto={handleDeleteFromCart} carrito={carrito} />
+          }
         />
         <Route
           path="/productos"
@@ -85,7 +101,7 @@ function App() {
             <GaleriaDeProductos
               borrarProducto={handleDeleteFromCart}
               agregarCarrito={handleAddToCart}
-              cart={cart}
+              carrito={carrito}
               productos={productos}
               cargando={cargando}
             />
@@ -94,19 +110,46 @@ function App() {
         <Route
           path="/adoptame"
           element={
-            <Adoptame borrarProducto={handleDeleteFromCart} cart={cart} />
+            <Adoptame borrarProducto={handleDeleteFromCart} carrito={carrito} />
           }
         />
         <Route
           path="/contacto"
           element={
-            <Contacto borrarProducto={handleDeleteFromCart} cart={cart} />
+            <Contacto borrarProducto={handleDeleteFromCart} carrito={carrito} />
           }
         />
         <Route
           path="*"
           element={
-            <NotFound borrarProducto={handleDeleteFromCart} cart={cart} />
+            <NotFound borrarProducto={handleDeleteFromCart} carrito={carrito} />
+          }
+        />
+        <Route
+          path="/productos/:id"
+          element={<ProductoID productos={productos} />}
+        />
+        <Route
+          path="/login"
+          element={
+            <Login
+              isAutorizado={isAutorizado}
+              setIsAutorizado={setIsAutorizado}
+            />
+          }
+        />
+        <Route
+          path="/administrar"
+          element={
+            <RutaProtegida
+              isAutorizado={isAutorizado}
+              setIsAutorizado={setIsAutorizado}
+            >
+              <Administrar
+                isAutorizado={isAutorizado}
+                setIsAutorizado={setIsAutorizado}
+              />
+            </RutaProtegida>
           }
         />
       </Routes>

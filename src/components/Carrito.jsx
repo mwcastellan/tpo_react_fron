@@ -1,6 +1,7 @@
 import React from "react";
 
-const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
+/* Carrito de Compras */
+const Carrito = ({ carrito, isOpen, onClose, borrarProducto }) => {
   return (
     <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
       <div className="cart cart-header bg-primary">
@@ -16,12 +17,12 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
         </button>
       </div>
       <div className="cart-content">
-        {cartItems.length === 0 ? (
+        {carrito.length === 0 ? (
           <p>El carrito está vacío.</p>
         ) : (
           <section>
             <ul className="card-header">
-              {cartItems.map((item, index) => (
+              {carrito.map((item, index) => (
                 <li
                   className="card-body d-flex justify-content-between align-items-center"
                   key={index}
@@ -60,4 +61,4 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
   );
 };
 
-export default Cart;
+export default Carrito;
