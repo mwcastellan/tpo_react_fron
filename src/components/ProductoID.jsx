@@ -18,7 +18,7 @@ const ProductoID = ({ productos }) => {
         <h6 className="card-title">Descripcion1: {producto.descripcion1}</h6>
         <h6 className="card-title">Descripcion2: {producto.descripcion2}</h6>
       </div>
-      <button onClick={() => navigate(-1)}>Volver</button>
+      <button className="btn btn-secondary" onClick={() => navigate(-1)}>Volver</button>
     </article>
   );
 };
