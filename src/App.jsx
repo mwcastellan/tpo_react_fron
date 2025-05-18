@@ -135,6 +135,7 @@ function App() {
             <Login
               isAutorizado={isAutorizado}
               setIsAutorizado={setIsAutorizado}
+              productos={productos}
             />
           }
         />
@@ -144,10 +145,12 @@ function App() {
             <RutaProtegida
               isAutorizado={isAutorizado}
               setIsAutorizado={setIsAutorizado}
+              productos={productos}
             >
               <Administrar
                 isAutorizado={isAutorizado}
                 setIsAutorizado={setIsAutorizado}
+                productos={productos}
               />
             </RutaProtegida>
           }

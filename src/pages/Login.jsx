@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 /* Login */
-const Login = ({ isAutorizado, setIsAutorizado }) => {
+const Login = ({ isAutorizado, setIsAutorizado}) => {
   const ira = useNavigate();
   const autorizar = () => {
     setIsAutorizado(!isAutorizado);
