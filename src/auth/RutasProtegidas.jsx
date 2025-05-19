@@ -12,7 +12,7 @@ function RutaProtegidas({
       <Navigate
         to="/login"
         isAutorizado={isAutorizado}
-        setIsAutorizado={setIsAutorizado}
+        setIsAutorizado = {setIsAutorizado}
         productos={productos}
         replace
       />

@@ -24,9 +24,7 @@ const Administrar = ({ isAutorizado, setIsAutorizado, productos }) => {
         {!isAutorizado && <p>Muchas gracias, hasta luego!</p>}
       </section>
       <section>
-        <button className="btn btn-secondary" onClick="">
-          Alta de Productos
-        </button>
+        <button className="btn btn-secondary">Alta de Productos</button>
         <ProductosListaAdm productos={productos} />
       </section>
       <Footer />

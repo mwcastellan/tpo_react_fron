@@ -16,12 +16,8 @@ const ProductoAdm = ({ producto }) => {
         <img src={producto.imagen} width="50%" height="50%" />
       </div>
       <div className="card-footer text-muted">
-        <button className="btn btn-secondary" onClick="">
-          Modificar
-        </button>
-        <button className="btn btn-secondary" onClick="">
-          Eliminar
-        </button>
+        <button className="btn btn-secondary">Modificar</button>
+        <button className="btn btn-secondary">Eliminar</button>
       </div>
 
       <Link to={`/productos/${producto.id}`}> Más detalle</Link>
