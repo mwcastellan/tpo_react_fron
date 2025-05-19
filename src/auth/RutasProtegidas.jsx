@@ -4,7 +4,6 @@ import { Navigate } from "react-router-dom";
 function RutaProtegidas({
   isAutorizado,
   setIsAutorizado,
-  productos,
   children,
 }) {
   if (!isAutorizado) {
@@ -13,7 +12,6 @@ function RutaProtegidas({
         to="/login"
         isAutorizado={isAutorizado}
         setIsAutorizado = {setIsAutorizado}
-        productos={productos}
         replace
       />
     );

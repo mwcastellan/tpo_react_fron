@@ -13,7 +13,6 @@ import Administrar from "./pages/Administrar";
 import RutaProtegida from "./auth/RutasProtegidas";
 
 /* APP */
-
 function App() {
   /* Carrito de compras */
   const [carrito, setCarrito] = useState([]);
@@ -135,7 +134,6 @@ function App() {
             <Login
               isAutorizado={isAutorizado}
               setIsAutorizado={setIsAutorizado}
-              productos={productos}
             />
           }
         />
@@ -145,7 +143,6 @@ function App() {
             <RutaProtegida
               isAutorizado={isAutorizado}
               setIsAutorizado={setIsAutorizado}
-              productos={productos}
             >
               <Administrar
                 isAutorizado={isAutorizado}
