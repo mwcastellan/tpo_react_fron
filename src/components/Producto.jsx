@@ -13,6 +13,7 @@ const Producto = ({ producto, addToCart }) => {
       <h5 className="card-header">{producto.nombre}</h5>
       <div className="card-body">
         <h6 className="card-title">Articulo: {producto.id}</h6>
+        <h6 className="card-title">Categoria: {producto.categoria}</h6>
         <h6 className="card-title">Precio: ${producto.precio}</h6>
         <h6 className="card-title">Disponible: {producto.disponible}</h6>
         <img src={producto.imagen} width="50%" height="50%" />
