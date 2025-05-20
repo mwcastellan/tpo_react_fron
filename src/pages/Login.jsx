@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderAdm from "../components/estaticos/HeaderAdm";
 import { useNavigate } from "react-router-dom";
 
 /* Login */
@@ -11,9 +12,7 @@ const Login = ({ isAutorizado, setIsAutorizado }) => {
 
   return (
     <>
-      <header className="Header bg-primary">
-        <h2>Veterinaria - Curso React Frontend - Clase 25022</h2>
-      </header>
+      <HeaderAdm />
       <article className="card mb-3 list-group-item list-group-item-action flex-column align-items-start">
         <h5 className="card-header">Login</h5>
         <div className="card-body">
