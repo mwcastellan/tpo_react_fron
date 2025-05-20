@@ -10,7 +10,6 @@ const Header = ({ carrito, borrarProducto }) => {
   return (
     <header className="Header bg-primary">
       <h2>Veterinaria - Curso React Frontend - Clase 25022</h2>
-
       <nav className="Nav navbar-expand-lg bg-primary">
         <img src={Logo} />
         <ul className="navbar-nav me-auto Nav-Ul">
@@ -25,7 +24,10 @@ const Header = ({ carrito, borrarProducto }) => {
             </Link>
           </li>
           <li>
-            <Link to="/adoptame" className="link nav-item h6 btn btn btn-success">
+            <Link
+              to="/adoptame"
+              className="link nav-item h6 btn btn btn-success"
+            >
               Adoptame
             </Link>
           </li>
@@ -35,7 +37,10 @@ const Header = ({ carrito, borrarProducto }) => {
             </Link>
           </li>
           <li>
-            <Link to="/administrar" className="link nav-item h6 btn btn-success">
+            <Link
+              to="/administrar"
+              className="link nav-item h6 btn btn-success"
+            >
               Administrar
             </Link>
           </li>
